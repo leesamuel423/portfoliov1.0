@@ -57,16 +57,13 @@ def index():
 
 @app.route('/hobbies')
 def hobbies():
-    title = "Hobbies"
-    return render_template('hobbies.html', title=title, hobbies=hobbies_data)
+    return render_template('hobbies.html', title="Hobbies", hobbies=hobbies_data)
 
 @app.route('/education')
 def education():
-    title = "Education"
-    return render_template('education.html', title=title, education=education_data)
+    return render_template('education.html', title="Education", education=education_data)
 
 @app.route('/experiences')
 def experiences():
-    title = "Experiences"
-    return render_template('experiences.html', title=title, experiences=experiences_data)
+    return render_template('experiences.html', title="Experiences", experiences=experiences_data)
 
