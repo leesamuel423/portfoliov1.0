@@ -6,13 +6,13 @@ load_dotenv()
 app = Flask(__name__)
 
 # Data
-user_data = {"name": "Sam", "about" : "bio"}
+user_data = {"name": "Sam", "about" : "bio", "profilepic": "./static/img/sam.jpg", "github": "link", "linkedin": "link"}
 
 
 hobbies_data = [
-    {"name": "Gym", "image": "static/img/logo.img"},
-    {"name": "Running", "image": "static/img/logo.img"},
-    {"name": "Binging KDramas", "image": "static/img/logo.img"}
+    {"name": "Gym", "image": "static/img/placeholder.png"},
+    {"name": "Running", "image": "static/img/placeholder.png"},
+    {"name": "Binging KDramas", "image": "static/img/placeholder.png"}
 ]
 
 education_data = [

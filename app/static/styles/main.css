@@ -170,7 +170,6 @@ header {
   }
 }
 
-
 /* Bio */
 
 .about {
@@ -192,11 +191,11 @@ header {
 /* Experience Page */
 
 .back-heading {
-  height: 40vh;
+  height: 50vh;
   background-color: #1c539f;
 }
 
-.experiences-container {
+.container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -206,6 +205,59 @@ header {
   padding: 20px;
   border-radius: 10px;
   z-index: 2;
-  width: 80%; 
+  width: 80%;
   max-width: 800px;
+}
+
+#experiences {
+  list-style-type: none;
+  padding: 0;
+}
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+.experience-header:hover {
+  background-color: #cde8e5;
+}
+.experience-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 10px;
+  background-color: #eef7ff;
+  color: #7ab2b2;
+}
+.experience-description li {
+  padding: 5px 0;
+}
+
+/* Hobbies */
+
+.hobbies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hobby {
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hobby img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hobby h3 {
+  margin-top: 10px;
+  text-align: center;
 }

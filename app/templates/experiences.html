@@ -17,31 +17,7 @@
         background-color: #eef7ff;
       }
 
-      #experiences {
-        list-style-type: none;
-        padding: 0;
-      }
-      .experience-header {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: #f9f9f9;
-        cursor: pointer;
-      }
-      .experience-header:hover {
-        background-color: #cde8e5;
-      }
-      .experience-description {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        padding: 0 10px;
-        background-color: #eef7ff;
-        color: #7ab2b2;
-      }
-      .experience-description li {
-        padding: 5px 0;
-      }
+
     </style>
   </head>
   <body>
@@ -55,9 +31,22 @@
           </a>
         </div>
       </nav>
+      <header>
+        <div class="menu-toggle" id="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="/">About</a></li>
+          <li><a href="education">Education</a></li>
+          <li><a href="hobbies">Hobbies</a></li>
+        </ul>
+      </header>
+
     </div>
 
-    <div class="experiences-container">
+
+
+    <div class="container">
       <h1>Work Experience</h1>
       <ul id="experiences">
         {% for experience in experiences %}
@@ -69,7 +58,7 @@
             <span>{{ experience.location }}</span>
           </div>
           <ul class="experience-description">
-            {% for description_line in experience.description %}
+            {% for description_line in experience.description %} 
             <li>{{ description_line }}</li>
             {% endfor %}
           </ul>
