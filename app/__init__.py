@@ -9,21 +9,21 @@ app = Flask(__name__)
 user_data = {"name": "Sam", "about" : "Software Engineer. Teacher. Runner. Professional Sleeper.", "profilepic": "./static/img/sam.jpg", "github": "link", "linkedin": "link"}
 
 hobbies_data = [
-    {"name": "Gym", "image": "static/img/placeholder.png"},
-    {"name": "Running", "image": "static/img/placeholder.png"},
-    {"name": "Binging KDramas", "image": "static/img/placeholder.png"}
+    {"name": "Gym", "image": "static/img/hobbies/gym.jpg"},
+    {"name": "Running", "image": "static/img/hobbies/running.jpg"},
+    {"name": "Binging KDramas", "image": "static/img/hobbies/kdrama.jpg"}
 ]
 
 education_data = [
     {
         "school": "School Name 1",
-        "img": "/static/img/placeholder.png",
+        "img": "/static/img/school/school1.jpg",
         "degree": "M.S in Computer Science",
         "year": 2025
     },
     {
         "school": "School Name 2",
-        "img": "/static/img/placeholder.png",
+        "img": "/static/img/school/school2.jpg",
         "degree": "B.S in Computer Science",
         "year": 2021
     }
