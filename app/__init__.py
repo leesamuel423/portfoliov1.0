@@ -5,9 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
-# Data
-user_data = {"name": "Sam", "about" : "bio", "profilepic": "./static/img/sam.jpg", "github": "link", "linkedin": "link"}
-
+# ---------- DATA ----------
+user_data = {"name": "Sam", "about" : "Software Engineer. Teacher. Runner. Professional Sleeper.", "profilepic": "./static/img/sam.jpg", "github": "link", "linkedin": "link"}
 
 hobbies_data = [
     {"name": "Gym", "image": "static/img/placeholder.png"},
@@ -53,6 +52,15 @@ experiences_data = [
     },
 ]
 
+locations_data = [
+    {"country": "Boston, MA, USA", "lat": 42.3601, "long": -71.0589},
+    {"country": "Fairfax County, VA, USA", "lat": 38.8462, "long": -77.3064},
+    {"country": "Fresno, California, USA", "lat": 36.7378, "long": -119.7871},
+    {"country": "Toronto, Ontario, Canada", "lat": 43.651070, "long": -79.347015}
+]
+
+# ---------- ROUTES ----------
+
 @app.route('/')
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), user=user_data)
@@ -68,4 +76,8 @@ def education():
 @app.route('/experiences')
 def experiences():
     return render_template('experiences.html', title="Experiences", experiences=experiences_data)
+
+@app.route('/locations')
+def map_view():
+    return render_template('map.html', title="Map", locationData=locations_data)
 
