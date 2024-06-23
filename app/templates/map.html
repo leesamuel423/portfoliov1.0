@@ -6,6 +6,8 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+
   </head>
 
   <body>
@@ -27,7 +29,7 @@
           <li><a href="/">About</a></li>
           <li><a href="education">Education</a></li>
           <li><a href="hobbies">Hobbies</a></li>
-          <li><a href="locations">Map</a></li>
+          <li><a href="experiences">Experience</a></li>
         </ul>
       </header>
     </div>
@@ -62,6 +64,13 @@
             L.marker([location.lat, location.long]).addTo(map)
                 .bindPopup(location.country);
         });
+
+        document
+          .getElementById("menu-toggle")
+          .addEventListener("click", function () {
+            document.getElementById("nav-menu").classList.toggle("active");
+          });
+
         </script>
       </div>
     </div>

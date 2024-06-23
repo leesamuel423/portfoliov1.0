@@ -17,13 +17,13 @@ hobbies_data = [
 education_data = [
     {
         "school": "School Name 1",
-        "img": "/static/img/something",
+        "img": "/static/img/placeholder.png",
         "degree": "M.S in Computer Science",
         "year": 2025
     },
     {
         "school": "School Name 2",
-        "img": "/static/img/something",
+        "img": "/static/img/placeholder.png",
         "degree": "B.S in Computer Science",
         "year": 2021
     }

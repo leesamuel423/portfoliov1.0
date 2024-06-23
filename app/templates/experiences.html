@@ -11,13 +11,13 @@
       rel="stylesheet"
     />
     <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+
     <style>
       body {
         font-family: "Work Sans", sans-serif;
         background-color: #eef7ff;
       }
-
-
     </style>
   </head>
   <body>
@@ -42,13 +42,10 @@
           <li><a href="locations">Map</a></li>
         </ul>
       </header>
-
     </div>
 
-
-
     <div class="container">
-      <h1>Work Experience</h1>
+      <h1>Experience</h1>
       <ul id="experiences">
         {% for experience in experiences %}
         <li>
@@ -59,7 +56,7 @@
             <span>{{ experience.location }}</span>
           </div>
           <ul class="experience-description">
-            {% for description_line in experience.description %} 
+            {% for description_line in experience.description %}
             <li>{{ description_line }}</li>
             {% endfor %}
           </ul>
@@ -81,6 +78,12 @@
           }
         });
       });
+
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("nav-menu").classList.toggle("active");
+        });
     </script>
   </body>
 </html>
